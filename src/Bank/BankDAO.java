@@ -154,7 +154,7 @@ public class BankDAO {
         } else if (dbms.equalsIgnoreCase("mysql")) {
             Class.forName("com.mysql.jdbc.Driver");
             return DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/" + datasource, "root", "javajava");
+                    "jdbc:mysql://localhost:3306/" + datasource, "root", "Hassan!@7");
         } else {
             throw new BankDBException("Unable to create datasource, unknown dbms.");
         }

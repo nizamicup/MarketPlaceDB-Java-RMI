@@ -34,6 +34,7 @@ public class BankImpl extends UnicastRemoteObject implements Bank {
         String failureMsg = "Could not create account for: " + holderName;
         try {
             AccountDTO account = cachedAcct(holderName);
+            
             if (account != null) {
                 throw new RejectedException(acctExistsMsg);
             }
