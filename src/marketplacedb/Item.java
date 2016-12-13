@@ -5,10 +5,33 @@
  */
 package marketplacedb;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Nizam
  */
-public class Item {
-    
+public class Item implements Serializable{
+
+    String name;
+    float price;
+    String ClientId;
+
+    public Item(String name, float price, String ClientId) {
+        this.name = name;
+        this.price = price;
+        this.ClientId = ClientId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+    public String getClientId(){
+       return ClientId;
+    }
+
 }
