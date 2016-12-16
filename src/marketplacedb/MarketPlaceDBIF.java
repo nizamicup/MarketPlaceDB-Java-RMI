@@ -6,6 +6,7 @@
 package marketplacedb;
 
 import Trader.TraderIF;
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
 import java.util.Map;
@@ -14,10 +15,8 @@ import java.util.Map;
  *
  * @author Nizam
  */
-public interface MarketPlaceDBIF {
-    void registerClient(TraderIF obj) throws RemoteException;
-
-    void unregisterClient(TraderIF obj) throws RemoteException;
+public interface MarketPlaceDBIF extends Remote{
+    void registerClient(TraderIF trader) throws RemoteException;
     
     void login(TraderIF client) throws RemoteException;
     

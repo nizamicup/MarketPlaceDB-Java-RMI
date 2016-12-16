@@ -5,6 +5,7 @@
  */
 package Trader;
 
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 import marketplacedb.Item;
 
@@ -12,9 +13,10 @@ import marketplacedb.Item;
  *
  * @author Nizam
  */
-public interface TraderIF {
+public interface TraderIF extends Remote{
     void retrieveMsg(String message) throws RemoteException;
      String getID() throws RemoteException;
+      String getPassword() throws RemoteException;
      void notifyCustomer(Item item, float price) throws RemoteException;
      void notitySeller(Item item, float price) throws RemoteException;
 }
